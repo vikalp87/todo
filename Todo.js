@@ -56,15 +56,15 @@ btn.addEventListener("click", additem);
 uservalue.addEventListener("input", (e) => {
   let inputlength = uservalue.value;
 
-  if (inputlength.length >= 40) {
-         uservalue.value=uservalue.value.substring(0,40);
+  if (inputlength.length >= 30) {
+         uservalue.value=uservalue.value.substring(0,30);
 
     islengthexceeds=true;
-    warningmsg.innerHTML = "you can add upto 40 words";
+    warningmsg.innerHTML = "you can add upto 30 characters";
     warningmsg.style.color = "red";
     box.appendChild(warningmsg);
   }
-  if ((islengthexceeds == true && inputlength.length < 40)) {
+  if ((islengthexceeds == true && inputlength.length < 30)) {
     box.removeChild(warningmsg);
   }
 });
