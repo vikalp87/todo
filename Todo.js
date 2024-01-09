@@ -57,6 +57,8 @@ uservalue.addEventListener("input", (e) => {
   let inputlength = uservalue.value;
 
   if (inputlength.length >= 40) {
+         uservalue.value=uservalue.value.substring(0,40);
+
     islengthexceeds=true;
     warningmsg.innerHTML = "you can add upto 40 words";
     warningmsg.style.color = "red";
