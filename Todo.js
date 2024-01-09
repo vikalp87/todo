@@ -24,7 +24,10 @@ function additem() {
       sessionStorage.setItem(`Todo${i++}`, val);
     }
       if(islengthexceeds)
-      box.removeChild(warningmsg)
+      {  
+         box.removeChild(warningmsg)
+          islengthexceeds=false;
+      }
 
     item.querySelector(".Delete").addEventListener("click", (e) => {
       removeitem(e.target.parentElement);
@@ -66,6 +69,8 @@ uservalue.addEventListener("input", (e) => {
   }
   if ((islengthexceeds == true && inputlength.length < 30)) {
     box.removeChild(warningmsg);
+    islengthexceeds=false;
+    
   }
 });
 
